@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic React</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div class="root">Not Rendered</div>
+
+    <script type="text/babel">
+
+
+            const home = document.querySelector('.root');
+     
+       
+        const csss = {color:'red',fontSize:'25px'};
+
+        const Navbar = (
+            <div style={csss}>
+
+                <p>Home </p>
+                <p>About Us</p>
+                </div>
+        )
+
+        const Main =(
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate minima accusantium omnis nam dolorem quos a placeat mollitia cumque rerum. Odio ullam, facilis doloribus accusantium deserunt quae veniam! Facere, id?</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias placeat quod, aperiam repellat excepturi in laudantium esse corrupti doloribus molestias officia reiciendis pariatur dolore magnam necessitatibus beatae, rem fuga blanditiis?</p>
+                </div>
+        ) 
+
+        const Footer = (
+            <div>
+                <p>Footer</p>
+                </div>
+        )
+
+        const App = (
+            <div>
+                {Navbar} {Main} {Footer}
+            </div>
+        )
+
+
+        ReactDOM.render(App,home);
+
+
+
+   
+    </script>
+  </body>
+  
+</html>
